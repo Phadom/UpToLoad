@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>下拉刷新</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .content {}
+    
+    .ul {}
+    
+    .ul li {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    .read {
+        color: red
+    }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <ul class="ul" id="ul">
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+        </ul>
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/mustache.min.js"></script>
+    <script src="js/refresh.js"></script>
+    <script type="text/template" id="template">
+        {{#info}}
+        <li class="{{read}}">{{content}}</li>
+        {{/info}}
+    </script>
+</body>
+
+</html>
